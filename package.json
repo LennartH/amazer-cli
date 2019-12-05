@@ -14,7 +14,7 @@
     "test": "jest",
     "start": "ts-node src/main.ts",
     "build": "tsc --sourceMap false -p .",
-    "prepare": "npm test && npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
