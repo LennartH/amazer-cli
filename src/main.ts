@@ -1,10 +1,10 @@
 import yargs from "yargs";
 import _ from "lodash";
-import amazer, { Config, Area, areaToString } from "amazer";
+import amazer, { Area, areaToString, } from "amazer";
 import { areaToFile, writeStructuredFile, areaFromFile } from "./files";
 import { cliOptions, displayOptions, interactiveOptions, CliArgs, DisplayArgs } from "./options";
 import { interactiveLoop } from "./interactive";
-import { prepareAmazerConfig } from "./util";
+import { prepareAmazerConfig, configFromArgs } from "./util";
 
 
 // TODO Migrate from yargs to vorpal
@@ -28,7 +28,7 @@ cli.argv;
 
 
 function main(argv: CliArgs) {
-    let config = Config.fromObject(argv);
+    let config = configFromArgs(argv);
     const area = amazer(config).generate();
     if (!argv.silent) {
         console.log(areaToString(area));

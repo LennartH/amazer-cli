@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Amazer CLI",
+            "program": "${workspaceFolder}/src/main.ts",
+            "args": ["-s", "15x15", "-g", "RecursiveBacktracker"],
+            // "args": ["-s", "25x25", "-g", "Nystrom:200,3x3,10x10", "-m", "RemoveDeadends:0.5"],
+            // "args": ["-c", "configs/complex-nystrom.yml"],
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ]
+        }
+    ]
+}

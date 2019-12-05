@@ -5,7 +5,7 @@ import fs from "fs";
 import amazer, { Config, Area, areaToString, Dict } from "amazer";
 import { InteractiveArgs } from "./options";
 import { areaToFile, writeStructuredFile, AreaWritableFormat } from "./files";
-import { prepareAmazerConfig } from "./util";
+import { prepareAmazerConfig, configFromArgs } from "./util";
 import { cli } from "./main";
 
 
@@ -108,7 +108,7 @@ export function interactiveLoop(args: InteractiveArgs) {
 
         if (generateArea) {
             try {
-                config = Config.fromObject(configArgs);
+                config = configFromArgs(configArgs);
                 area = amazer(config).generate();
                 console.log(areaToString(area));
             } catch(error) {

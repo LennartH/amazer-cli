@@ -11,6 +11,11 @@ interface ArgsBase extends Dict<any> {
     format?: AreaWritableFormat,
 }
 
+function parseGen(arg: string) {
+    let gen = parseGenerator(arg);
+    return gen;
+}
+
 function sharedOptions(): Dict<Options> {
     return {
         c: {
@@ -29,7 +34,7 @@ function sharedOptions(): Dict<Options> {
         g: {
             alias: "generator",
             type: "string",
-            coerce: parseGenerator,
+            coerce: parseGen,
             describe: `The area generator to use, defaults to ${capitalize(RecursiveBacktracker.name)}`,
             requiresArg: true
         },

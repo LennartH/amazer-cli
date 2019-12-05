@@ -5,14 +5,14 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "amazer": "./dist/cli/main.js"
+    "amazer": "./dist/main.js"
   },
   "files": [
     "dist/"
   ],
   "scripts": {
     "test": "jest",
-    "start": "ts-node src/cli/main.ts",
+    "start": "ts-node src/main.ts",
     "build": "tsc --sourceMap false -p .",
     "prepare": "npm test && npm run build"
   },
