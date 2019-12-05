@@ -45,7 +45,7 @@
     "typescript": "^3.7.3"
   },
   "dependencies": {
-    "amazer": "^0.1.1",
+    "amazer": "^0.1.2",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
     "readline-sync": "^1.4.10",
