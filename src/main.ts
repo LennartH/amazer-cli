@@ -1,6 +1,6 @@
 import yargs from "yargs";
 import _ from "lodash";
-import amazer, { Area, areaToString, } from "amazer";
+import amazer, { Area, areaToString } from "amazer";
 import { areaToFile, writeStructuredFile, areaFromFile } from "./files";
 import { cliOptions, displayOptions, interactiveOptions, CliArgs, DisplayArgs } from "./options";
 import { interactiveLoop } from "./interactive";
@@ -28,7 +28,7 @@ cli.argv;
 
 
 function main(argv: CliArgs) {
-    let config = configFromArgs(argv);
+    const config = configFromArgs(argv);
     const area = amazer(config).generate();
     if (!argv.silent) {
         console.log(areaToString(area));
