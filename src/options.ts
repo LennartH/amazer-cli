@@ -1,5 +1,5 @@
 import { Options } from "yargs";
-import { Dict, capitalize, Size, parseGenerator, GeneratorWithConfig, RecursiveBacktracker, parseModifier, ModifierWithConfig } from "amazer";
+import { Dict, Size, parseGenerator, GeneratorWithConfig, parseModifier, ModifierWithConfig } from "amazer";
 import { AreaWritableFormat, AreaReadableFormat } from "./files";
 
 
@@ -30,7 +30,7 @@ function sharedOptions(): Dict<Options> {
             alias: "generator",
             type: "string",
             coerce: parseGenerator,
-            describe: `The area generator to use, defaults to ${capitalize(RecursiveBacktracker.name)}`,
+            describe: "The area generator to use, defaults to RecursiveBacktracker",
             requiresArg: true
         },
         m: {

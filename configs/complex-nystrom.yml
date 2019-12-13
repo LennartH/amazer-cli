@@ -1,4 +1,4 @@
-size: 50x50
+size: 30x30
 generator:
   Nystrom:
     roomPlacementAttempts: 50
@@ -6,7 +6,7 @@ generator:
     maxRoomSize: 10x10
 modifiers:
   - BreakPassages:
-      amount: 50
-      minimumShortcutDistance: 30
-  - RemoveDeadends:0.8
+      amount: 100
+      minimumShortcutDistance: 50
+  - RemoveDeadends:0.4
   - Emmure
